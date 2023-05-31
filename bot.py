@@ -29,7 +29,7 @@ openai.api_key = retrieved_secret.value
 
 class MyBot(ActivityHandler):
     ### This is an example. This is also really bad design.
-    ### If you don't have access to Azure OpenAI Service, you may also use an Open Source LLM model.
+    ### If you don't have access to Azure OpenAI Service, you may also use an Open Source LLM.
     ### This is using ChatGPT as it performs the best for chat scenarios.
     async def on_message_activity(self, turn_context: TurnContext):
         response = openai.ChatCompletion.create(
