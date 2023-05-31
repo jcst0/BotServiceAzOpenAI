@@ -10,15 +10,19 @@ import openai
 from azure.keyvault.secrets import SecretClient
 from azure.identity import DefaultAzureCredential, AzureCliCredential
 
-keyVaultName = "aikvjcst"
-KVUri = f"https://aikvjcst.vault.azure.net"
+# Enter KeyVault Name and URI Endpoint below
+keyVaultName = ""
+KVUri = f""
 
+# Can change below to DefaultAzureCredential() if you use another form of auth
 credential = AzureCliCredential()
 client = SecretClient(vault_url=KVUri, credential=credential)
-retrieved_secret = client.get_secret("aoai")
+# Enter Secret name below
+retrieved_secret = client.get_secret("")
 
 openai.api_type = "azure"
-openai.api_base = "https://azopenai-demo.openai.azure.com/"
+# Enter API endpoint below for Azure OpenAI Service
+openai.api_base = ""
 openai.api_version = "2023-03-15-preview"
 openai.api_key = retrieved_secret.value
 
