@@ -2,7 +2,7 @@
 
 AI Bot Stuff
 
-This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple bot that accepts input from the user and echoes it back.
+This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple bot with Azure Bot Service that accepts input from the user, communicates to a LLM (Azure OpenAI Service GPT Model in this scenario), and returns the response to the user.
 
 ## Prerequisites
 
